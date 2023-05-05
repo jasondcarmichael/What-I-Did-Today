@@ -58,7 +58,12 @@ function App(props) {
   ));
 
   const filterList = FILTER_NAMES.map((name) => (
-    <FilterButtton key={name} name={name} />
+    <FilterButtton
+      key={name} 
+      name={name}
+      isPressed={name === filter}
+      setFilter={setFilter}
+    />
   ));
 
   const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
