@@ -4,13 +4,16 @@ import FilterButtton from "./components/FilterButton";
 
 
 function App(props) {
+  function addTask(name) {
+    alert(name)
+  }
   const taskList = props.tasks?.map((task) => (
     <Todo id={task.id} name={task.name} completed={task.completed} key={task.id}/>));
 
   return (
     <div className="todoapp stack-large">
       <h1>What I did today</h1>
-      <Form />
+      <Form addTask={addTask}/>
       <div className="filters btn-group stack-exception">
        <FilterButtton />
        <FilterButtton />
@@ -22,10 +25,6 @@ function App(props) {
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading">
           {taskList}
-
-        {/* <Todo name="Eat" completed={true} id="todo-0"/>
-        <Todo name="Sleep" completed={false} id="todo-1"/>
-        <Todo name="Repeat" completed={false} id="todo-2"/> */}
       </ul>
     </div>
   );

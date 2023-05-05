@@ -1,6 +1,12 @@
+
 export default function Form(props) {
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.addTask('Oh what a beautiful morning!')
+  }
+  
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">
             What did I accomplish?
