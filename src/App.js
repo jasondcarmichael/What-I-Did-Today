@@ -4,7 +4,6 @@ import Form from "./components/Form";
 import Todo from "./components/Todo";
 import FilterButtton from "./components/FilterButton";
 
-
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
 
@@ -28,6 +27,16 @@ function App(props) {
     setTasks(remainingTasks)
   }
 
+  function editTask(id, newName) {
+    const editedTaskList = tasks.map((task) => {
+      if (id === task.id) {
+        return {...task, name: newName}
+      }
+      return task;
+    });
+    setTasks(editedTaskList);
+  }
+
   const taskList = tasks.map((task) => (
     <Todo 
       id={task.id}
@@ -36,6 +45,7 @@ function App(props) {
       key={task.id}
       toggleTaskCompleted={toggleTaskCompleted}
       deleteTask={deleteTask}
+      editTask={editTask}
     />
   ));
 
