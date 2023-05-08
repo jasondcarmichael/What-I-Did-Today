@@ -3,6 +3,7 @@ import { nanoid } from "nanoid";
 import Form from "./components/Form";
 import Todo from "./components/Todo";
 import FilterButtton from "./components/FilterButton";
+import DateTime from "./components/DateTime";
 
 function usePrevious(value) {
   const ref = useRef();
@@ -91,6 +92,7 @@ function App(props) {
   return (
     <div className="todoapp stack-large">
       <h1>What I did today</h1>
+      <DateTime />
       <Form addTask={addTask}/>
       <div className="filters btn-group stack-exception">
        {filterList}
