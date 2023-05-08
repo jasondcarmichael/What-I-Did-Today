@@ -91,7 +91,7 @@ function App(props) {
 
   return (
     <div className="todoapp stack-large">
-      <h1>What I did today</h1>
+      <h1>Momentum: Celebrate Your Wins</h1>
       <DateTime />
       <Form addTask={addTask}/>
       <div className="filters btn-group stack-exception">

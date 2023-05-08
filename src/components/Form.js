@@ -18,7 +18,7 @@ export default function Form(props) {
         <form onSubmit={handleSubmit}>
           <h2 className="label-wrapper">
             <label htmlFor="new-todo-input" className="label__lg">
-              What did I accomplish?
+              What did I accomplish today?
             </label>
           </h2>
           <input
