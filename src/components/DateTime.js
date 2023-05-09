@@ -12,7 +12,7 @@ export default function DateTime() {
 
     return (
         <div>
-            <p> Today is {date.toLocaleDateString()}</p>
+            <p>Today is {date.toLocaleDateString()}</p>
         </div>
     )
 }

@@ -25,7 +25,7 @@ function App(props) {
   const [filter, setFilter] = useState('All');
 
   function addTask(name) {
-    const newTask = { id: `win-${nanoid()}`, name, completed: false };
+    const newTask = { id: `todo-${nanoid()}`, name, completed: false };
     setTasks([...tasks, newTask]);
   }
 
@@ -91,7 +91,7 @@ function App(props) {
 
   return (
     <div className="todoapp stack-large">
-      <h1>Momentum: Celebrate Your Wins</h1>
+      <h1>Today's Tasks</h1>
       <DateTime />
       <Form addTask={addTask}/>
       <div className="filters btn-group stack-exception">
